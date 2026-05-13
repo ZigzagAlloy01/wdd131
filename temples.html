@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | Ivan Salamanca</title>
+    <meta name="description" content="WDD 131 - Week 02 Assignment: Responsive Temple Album.">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="icon" href="https://www.svgrepo.com/show/398142/purple-circle.svg" type="image/svg+xml">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" title="Menu">&#9776;</button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="small">Small</a></li>
+                <li><a href="#" id="medium">Medium</a></li>
+                <li><a href="#" id="large">Large</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+        <div id="temple-grid" class="grid-container"></div>
+    </main>
+
+    <footer>
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Lorenzo Iván Salamanca Córdoba | Mexico
+        </p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

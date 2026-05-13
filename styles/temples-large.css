@@ -1,0 +1,14 @@
+@media screen and (min-width: 600px) {
+    #menu {
+        display: none; /* Hide hamburger on desktop [cite: 125] */
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for large view [cite: 116] */
+    }
+}
