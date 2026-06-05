@@ -131,13 +131,6 @@ const temples = [
     imageUrl: "https://www.churchofjesuschrist.org/imgs/cd518a59ee7511eca935eeeeac1ecdb94609c80b/full/800%2C/0/default?lang=eng"
   },
   {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
-    imageUrl: "https://www.churchofjesuschrist.org/imgs/7210c09be95c4474772ae52e5f31c23c08112784/full/800%2C/0/default?lang=eng"
-  },
-  {
     templeName: "Papeete Tahiti",
     location: "Papeete, Tahiti",
     dedicated: "1983, October, 27",
@@ -195,9 +188,8 @@ const temples = [
   }
 ];
 
-createTempleCard();
-
-function createTempleCard() {
+function createTempleCard(temples) {
+    templeGrid.innerHTML = "";
     temples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
@@ -220,6 +212,62 @@ function createTempleCard() {
         card.appendChild(area);
         card.appendChild(img);
         
-        document.querySelector(".res-grid").appendChild(card);
+        templeGrid.appendChild(card);
     });
 }
+
+document.querySelector("#home").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector("#page-title").textContent = "Home";
+    createTempleCard(temples);
+});
+
+document.querySelector("#old").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    document.querySelector("#page-title").textContent = "Old";
+
+    const oldTemples = temples.filter(
+        temple => parseInt(temple.dedicated) < 1900
+    );
+
+    createTempleCard(oldTemples);
+});
+
+document.querySelector("#new").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    document.querySelector("#page-title").textContent = "New";
+
+    const newTemples = temples.filter(
+        temple => parseInt(temple.dedicated) > 2000
+    );
+
+    createTempleCard(newTemples);
+});
+
+document.querySelector("#small").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    document.querySelector("#page-title").textContent = "Small";
+
+    const smallTemples = temples.filter(
+        temple => temple.area < 10000
+    );
+
+    createTempleCard(smallTemples);
+});
+
+document.querySelector("#large").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    document.querySelector("#page-title").textContent = "Large";
+
+    const largeTemples = temples.filter(
+        temple => temple.area > 90000
+    );
+
+    createTempleCard(largeTemples);
+});
+
+createTempleCard(temples);
