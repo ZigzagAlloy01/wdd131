@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product review form assignment for WDD 131, allowing users to rate and review specific products.">
+    <meta name="author" content="Lorenzo Iván Salamanca Córdoba">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <p class="form-instructions">Fields maked with an asterisk (<span class="required-indicator">*</span>) are required.</p>
+
+        <form method="get" action="review.html">
+            <div class="form-group">
+                <label for="product-id">Product Name <span class="required-indicator">*</span></label>
+                <select id="product-id" name="product-id" required>
+                    <option value="" disabled selected>Select a Product...</option>
+                </select>
+            </div>
+            <fieldset class="form-group">
+                <legend>Overall Rating <span class="required-indicator">*</span></legend>
+                <div class="rating-container">
+                    <label class="rating-label">
+                        <input type="radio" name="rating" value="1" required>
+                        <span class="star-text">1 ★</span>
+                    </label>
+                    <label class="rating-label">
+                        <input type="radio" name="rating" value="2">
+                        <span class="star-text">2 ★★</span>
+                    </label>
+                    <label class="rating-label">
+                        <input type="radio" name="rating" value="3">
+                        <span class="star-text">3 ★★★</span>
+                    </label>
+                    <label class="rating-label">
+                        <input type="radio" name="rating" value="4">
+                        <span class="star-text">4 ★★★★</span>
+                    </label>
+                    <label class="rating-label">
+                        <input type="radio" name="rating" value="5">
+                        <span class="star-text">5 ★★★★★</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="installation-date">Date of Installation <span class="required-indicator">*</span></label>
+                <input type="date" id="installation-date" name="installationDate" required>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Useful Features (Check all that apply)</legend>
+                <div class="checkbox-container">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="features" value="durability">
+                        Durability
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="features" value="ease-of-use">
+                        Ease of Use
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="features" value="performance">
+                        Performance
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="features" value="design">
+                        Design
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="written-review">Written Review (Optional)</label>
+                <textarea id="written-review" name="writtenReview" rows="5" placeholder="Share your experience with this product..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="user-name">Your Name (Optional)</label>
+                <input type="text" id="user-name" name="userName" placeholder="e.g. John Doe">
+            </div>
+
+            <input type="submit" value="Submit Product Review" class="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;
+            <span id="currentyear"></span>
+            Lorenzo Iván Salamanca Córdoba| Ciudad Juárez, Chihuahua, México</p>
+    </footer>
+</body>
+</html>
