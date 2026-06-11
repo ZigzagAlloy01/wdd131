@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Contact us about Los Sacrificios de Sara.">
+
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Los Sacrificios de Sara</h1>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="themes.html">Themes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section>
+
+    <h2>Send a Message</h2>
+
+    <form id="contactForm">
+
+        <label for="name">
+            Name
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            required>
+
+        <label for="email">
+            Email
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required>
+
+        <label for="message">
+            Message
+        </label>
+
+        <textarea
+            id="message"
+            name="message"
+            required></textarea>
+
+        <button type="submit">
+            Submit
+        </button>
+
+    </form>
+
+    <p id="confirmation"></p>
+
+</section>
+
+</main>
+
+<footer>
+    <p>
+        &copy;
+        <span id="currentYear"></span>
+        Los Sacrificios de Sara
+    </p>
+    <a href="references.html">References</a>
+</footer>
+
+</body>
+</html>
