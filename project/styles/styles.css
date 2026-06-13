@@ -177,7 +177,7 @@ footer {
     margin-top: 2rem;
 }
 
-footer a[href="references.html"], #return_home {
+footer a[href="references.html"], #return_home_btn {
     display: inline-block;
     margin-top: 1rem;
     background: var(--primary-color);
@@ -187,9 +187,10 @@ footer a[href="references.html"], #return_home {
     text-decoration: none;
 }
 
-footer a[href="references.html"]:hover, #return_home:hover {
+footer a[href="references.html"]:hover, #return_home_btn:hover {
     background: var(--secondary-color-dark);
 }
+
 
 @media screen and (min-width: 768px) {
 
